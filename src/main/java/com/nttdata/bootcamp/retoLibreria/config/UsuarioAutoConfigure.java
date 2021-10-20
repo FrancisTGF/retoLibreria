@@ -21,12 +21,13 @@ public class UsuarioAutoConfigure {
 	}
 
 	@Bean
-	public Usuario saludo() {
+	public Usuario addUsuario() {
 		Usuario usuario = new Usuario();
 
 		usuario = new UsuarioBuilder().build(properties.getNombre(), properties.getEmail(), properties.getTelefono(),
 				properties.getDireccion());
 
+		System.out.println(usuario.toString());
 		return usuario;
 
 	}
